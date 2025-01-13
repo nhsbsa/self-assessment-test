@@ -11,7 +11,7 @@ NHSBSA DDAT Profession Capability Framework Self Test
 <div class="nhsuk-back-link">
 
 
-    <a class="nhsuk-back-link__link" href="/ixd/q1" >
+    <a class="nhsuk-back-link__link" href="/ixd/q7" onClick="history.go(-1); return false;">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true" height="24" width="24">
             <path
@@ -29,7 +29,7 @@ NHSBSA DDAT Profession Capability Framework Self Test
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-        <form id="q2" action="/ixd/q3" method="post" class="form">
+        <form id="q7" action="/ixd/q8" method="post" class="form">
 
 
             <div class="nhsuk-form-group">
@@ -38,9 +38,9 @@ NHSBSA DDAT Profession Capability Framework Self Test
 
                 <fieldset class="nhsuk-fieldset">
                     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                        <span class="nhsuk-caption-l">Skill 1</span>
+                        <span class="nhsuk-caption-l">Skill 3</span>
                         <h1 class="nhsuk-fieldset__heading">
-                            Design communication - Q2
+                            Designing strategically - Q2
                         </h1>
                     </legend>
 
@@ -54,31 +54,31 @@ NHSBSA DDAT Profession Capability Framework Self Test
                     <div class="nhsuk-radios">
 
                         <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="option-1" name="q2" type="radio" value="apprentice" onclick="updateFormAction('q4')">
+                            <input class="nhsuk-radios__input" id="option-1" name="q7" type="radio" value="apprentice">
                             <label class="nhsuk-label nhsuk-radios__label" for="option-1">
-                                You can describe some methods for explaining design decisions
+                                You can describe how your design work aligns to the wider goals and vision of your team
                             </label>
                         </div>
 
 
                         <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="option-2" name="q2" type="radio" value="jnr-mid" onclick="updateFormAction('q4')">
+                            <input class="nhsuk-radios__input" id="option-2" name="q7" type="radio" value="jnr-mid">
                             <label class="nhsuk-label nhsuk-radios__label" for="option-2">
-                                You can clearly explain design decisions to others using appropriate tools and methods
+                                You can identify potential risks and use design to mitigate them
                             </label>
                         </div>
 
                         <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="option-3" name="q2" type="radio" value="snr" onclick="updateFormAction('q3')">
+                            <input class="nhsuk-radios__input" id="option-3" name="q7" type="radio" value="snr">
                             <label class="nhsuk-label nhsuk-radios__label" for="option-3">
-                                You can clearly document and communicate design decisions, related risks and any unresolved issues
+                                You can help teams align their work to the goals and vision of their organisation
                             </label>
                         </div>
 
                         <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input" id="option-4" name="q2" type="radio" value="lead-head" onclick="updateFormAction('q3')">
+                            <input class="nhsuk-radios__input" id="option-4" name="q7" type="radio" value="lead-head">
                             <label class="nhsuk-label nhsuk-radios__label" for="option-4">
-                                You can communicate design strategy across organisational boundaries
+                                You can work with leaders to ensure design is included in policy, technology and delivery processes early enough to inform effective decision making
                             </label>
                         </div>
 
@@ -116,11 +116,4 @@ NHSBSA DDAT Profession Capability Framework Self Test
 
     </div>
 </div>
-
-<script>
-    function updateFormAction(target) {
-        const form = document.getElementById('q2');
-        form.action = `/ixd/${target}`;
-    }
-</script>
 {% endblock %}
