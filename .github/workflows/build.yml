@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           publish_dir: ./app/views  # Ensure this path is correct
           github_token: ${{ secrets.GITHUB_TOKEN }}
