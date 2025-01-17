@@ -1,0 +1,11 @@
+
+          
+       - name: Setup Node.js environment
+         uses: actions/setup-node@v4.1.0
+            with:
+             node-version: '16' # Specify the Node.js version to use
+             always-auth: false # Set always-auth to false (default behavior)
+             check-latest: true # Optional: Check for the latest available Node.js version matching the version spec
+             registry-url: 'https://registry.npmjs.org/' # Specify the npm registry
+             cache: 'npm' # Enable caching for npm dependencies
+             cache-dependency-path: '**/package-lock.json' # Specify path for caching dependency file
