@@ -1,0 +1,108 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout1.html' %}
+
+{% block pageTitle %}
+NHSBSA DDAT Profession Capability Framework Self Test
+{% endblock %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+<div class="nhsuk-back-link">
+
+
+    <a class="nhsuk-back-link__link" href="/ixd/q16" onClick="history.go(-1); return false;">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true" height="24" width="24">
+            <path
+                d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+            </path>
+        </svg>
+        Go back</a>
+</div>
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <form id="q17" action="/ixd/results" method="post" class="form">
+
+
+            <div class="nhsuk-form-group">
+
+
+
+                <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                        <span class="nhsuk-caption-l">Skill 7</span>
+                        <h1 class="nhsuk-fieldset__heading">
+                            Leading design - Q2
+                        </h1>
+                    </legend>
+
+                    <div class="nhsuk-hint" id="question-hint">
+
+                        <p class="nhsuk-u-margin-bottom-2">Select the option that best reflects your current abilities
+                        </p>
+                        
+                    </div>
+
+                    <div class="nhsuk-radios">
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="option-1" name="q17" type="radio" value="apprentice">
+                            <label class="nhsuk-label nhsuk-radios__label" for="option-1">
+                                You can identify leaders in your organisation that designers need to work with
+                            </label>
+                        </div>
+
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="option-2" name="q17" type="radio" value="jnr-mid">
+                            <label class="nhsuk-label nhsuk-radios__label" for="option-2">
+                                You can support other designers and work with digital and data leaders in your organisation, when needed
+                            </label>
+                        </div>
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="option-3" name="q17" type="radio" value="snr">
+                            <label class="nhsuk-label nhsuk-radios__label" for="option-3">
+                                You can create an inclusive, productive environment for designers to work in while mentoring and coaching other designers
+                            </label>
+                        </div>
+
+                        <div class="nhsuk-radios__item">
+                            <input class="nhsuk-radios__input" id="option-4" name="q17" type="radio" value="lead-head">
+                            <label class="nhsuk-label nhsuk-radios__label" for="option-4">
+                                You can support a culture of learning and experimentation in your organisation while iterating and measurably improving design maturity within your organisation and its partners
+                            </label>
+                        </div>
+
+
+
+
+                    </div>
+                </fieldset>
+
+            </div>
+
+
+
+            <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                Continue
+            </button>
+
+
+
+
+
+
+        </form>
+
+    </div>
+</div>
+{% endblock %}
