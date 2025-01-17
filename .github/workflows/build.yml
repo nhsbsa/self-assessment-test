@@ -11,23 +11,22 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: 18.x
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build the project using Gulp
-        run: npm run build  # This will run 'gulp build'
+      - name: Build the project
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./app/views  # Ensure this points to the correct directory
+          publish_dir: ./app/views  # Ensure this path is correct
           github_token: ${{ secrets.GITHUB_TOKEN }}
