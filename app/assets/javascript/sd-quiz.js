@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     // Retrieve all stored answers from sessionStorage
     const totalQuestions = 17;
-    const resultsContainer = document.getElementById("ixd-results-container");
+    const resultsContainer = document.getElementById("sd-results-container");
 
     // Categories and their associated questions
     const skills = {
@@ -82,13 +82,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const overallAverage = overallScore / totalSkillCount;
     let overallLevel;
     if (overallAverage <= 1.5) {
-        overallLevel = "between Apprentice Designer and Junior Interaction Designer";
+        overallLevel = "between Apprentice Designer and Junior Service Designer";
     } else if (overallAverage <= 2.5) {
-        overallLevel = "Midweight Interaction Designer ";
+        overallLevel = "Midweight Service Designer ";
     } else if (overallAverage <= 3.5) {
-        overallLevel = "Senior Interaction Designer";
+        overallLevel = "Senior Service Designer";
     } else {
-        overallLevel = "between Lead Interaction Designer and Head of Interaction Design ";
+        overallLevel = "between Lead Service Designer and Head of Service Design ";
     }
 
     // Display overall level
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Retake quiz button
     document.getElementById("retake-quiz").addEventListener("click", () => {
         sessionStorage.clear();
-        window.location.href = "/ixd/q1";
+        window.location.href = "/sd/q1";
     });
 });
 

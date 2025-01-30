@@ -8,7 +8,7 @@ Quiz Results
 <!-- For adding a breadcrumb or back link -->
 {% block beforeContent %}
 <div class="nhsuk-back-link">
-    <a class="nhsuk-back-link__link" href="/ixd/q1" onClick="history.go(-1); return false;">
+    <a class="nhsuk-back-link__link" href="/cd/q1" onClick="history.go(-1); return false;">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true" height="24" width="24">
             <path
@@ -25,20 +25,19 @@ Quiz Results
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
         <h1>Your Quiz Results</h1>
-       
-        <p>Review the <a class="nhsuk-link nhsuk-link--no-visited-state" href="https://ddat-capability-framework.service.gov.uk/role/interaction-designer">specifications for your role </a>, to get a better understanding of your results.</p>
-        
-        <div id="ixd-results-container" class="nhsuk-panel-group">
+        <!--p>Here’s how you performed across all 7 skills:</p-->
+        <p>Review the <a class="nhsuk-link nhsuk-link--no-visited-state" href="https://ddat-capability-framework.service.gov.uk/role/content-designer">specifications for your role </a>, to get a better understanding of your results.</p>
+        <div id="cd-results-container" class="nhsuk-panel-group">
             <!-- Dynamic results will be injected here -->
         </div>
       
 
         <button class="nhsuk-button" id="retake-quiz">Retake Quiz</button>
 
-        <a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-left-3" data-module="nhsuk-button" href="https://nhsbsa.github.io/nhsbsa-digital-playbook/design/interaction-designer/training-resources" draggable="false"
+        <!--a class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-left-3" data-module="nhsuk-button" href="https://nhsbsa.github.io/nhsbsa-digital-playbook/design/interaction-designer/training-resources" draggable="false"
             role="button">
             View learning resources
-        </a>
+        </a-->
     </div>
 </div>
 {% endblock %}

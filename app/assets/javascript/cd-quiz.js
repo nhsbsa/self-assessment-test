@@ -14,18 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
 //Script 2
 document.addEventListener("DOMContentLoaded", function () {
     // Retrieve all stored answers from sessionStorage
-    const totalQuestions = 17;
-    const resultsContainer = document.getElementById("ixd-results-container");
+    const totalQuestions = 7;
+    const resultsContainer = document.getElementById("cd-results-container");
 
     // Categories and their associated questions
     const skills = {
-        "Design communication": ["q1", "q2", "q3"],
-        "Designing for everyone": ["q4", "q5"],
-        "Designing strategically": ["q6", "q7", "q8"],
-        "Designing together": ["q9", "q10", "q11"],
-        "Evidence based design": ["q12", "q13"],
-        "Iterative design": ["q14", "q15"],
-        "Leading design": ["q16", "q17"],
+        "Agile working": ["q1", "q2"],
+        "Content concepts and prototyping": ["q3"],
+        "Stakeholder relationship management ": ["q4"],
+        " Strategic thinking ": ["q5"],
+        "User focus ": ["q6"],
+        "User-centred content design": ["q7"],
+       
     };
 
     // Result summaries for each skill
@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
             if (answer) {
                 // Assign point values based on answer
                 switch (answer) {
-                    case "apprentice":
+                    case "apprentice-jnr":
                         score += 1;
                         break;
-                    case "jnr-mid":
+                    case "mid":
                         score += 2;
                         break;
                     case "snr":
@@ -82,13 +82,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const overallAverage = overallScore / totalSkillCount;
     let overallLevel;
     if (overallAverage <= 1.5) {
-        overallLevel = "between Apprentice Designer and Junior Interaction Designer";
+        overallLevel = "between Apprentice Designer and Junior Content Designer";
     } else if (overallAverage <= 2.5) {
-        overallLevel = "Midweight Interaction Designer ";
+        overallLevel = "Midweight Content Designer ";
     } else if (overallAverage <= 3.5) {
-        overallLevel = "Senior Interaction Designer";
+        overallLevel = "Senior Content Designer";
     } else {
-        overallLevel = "between Lead Interaction Designer and Head of Interaction Design ";
+        overallLevel = "between Lead Content Designer and Head of Content Design ";
     }
 
     // Display overall level
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Retake quiz button
     document.getElementById("retake-quiz").addEventListener("click", () => {
         sessionStorage.clear();
-        window.location.href = "/ixd/q1";
+        window.location.href = "/cd/q1";
     });
 });
 
