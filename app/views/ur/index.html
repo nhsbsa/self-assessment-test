@@ -1,0 +1,91 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout1.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+NHSBSA DDAT Profession Capability Framework Self Test
+{% endblock %}
+
+<!-- For adding a breadcrumb or back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs and https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block beforeContent %}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- Change the page title here -->
+    <h1>
+      User Research Skill Assessment
+
+    </h1>
+  </div>
+</div>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+   
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    <p>
+      This tool was built referencing the <a class="nhsuk-link nhsuk-link--no-visited-state"
+        href="https://ddat-capability-framework.service.gov.uk">Government Digital and Data Profession Capability
+        Framework</a>.
+    </p>
+    <p>It assesses skill level across seven core areas, using multiple choice questions</p>
+
+
+    <p>User Researchers can use this tool to:</p>
+
+    <ul>
+      <li>
+        assess their current skill levels in preparation for performance and development conversations
+      </li>
+      <li>
+        learn about the typical responsibilities and skills of their colleagues
+      </li>
+
+    </ul>
+
+    <p>Before you start, we recommend you:</p>
+
+    <ul>
+
+      <li>
+        set aside five to eight minutes to complete this test in one seating
+      </li>
+      <li>
+        be as objective as you can when answering the questions
+      </li>
+      <li>
+        remember that this is to aid self evaluation and development
+      </li>
+
+
+
+    </ul>
+
+
+    <!-- End of content -->
+    <a href="/ur/q1" class="nhsuk-button">
+      Start now
+    </a>
+
+  </div>
+</div>
+{% endblock %}
