@@ -82,21 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const overallAverage = overallScore / totalSkillCount;
     let overallLevel;
     if (overallAverage <= 1.5) {
-        overallLevel = "between Apprentice Designer and Junior Content Designer";
+        overallLevel = "an Apprentice or Junior Content Designer";
     } else if (overallAverage <= 2.5) {
-        overallLevel = "Midweight Content Designer ";
+        overallLevel = "a Midweight Content Designer";
     } else if (overallAverage <= 3.5) {
-        overallLevel = "Senior Content Designer";
+        overallLevel = "a Senior Content Designer";
     } else {
-        overallLevel = "between Lead Content Designer and Head of Content Design ";
+        overallLevel = "a Lead Content Designer or Head of Content Design ";
     }
 
     // Display overall level
     const overallPanel = document.createElement("div");
     overallPanel.className = "nhsuk-panel nhsuk-panel--confirmation";
     overallPanel.innerHTML = `
-        <h2 class="nhsuk-heading-m">Overall Level</h2>
-        <p>Your scores indicate you are <strong>${overallLevel}</strong>.</p>
+        
+        <p>Your scores indicate your skills may be aligned with <strong>${overallLevel}</strong>.</p>
     `;
     resultsContainer.appendChild(overallPanel);
 
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const table = document.createElement("table");
     table.className = "nhsuk-table";
     table.innerHTML = `
-    <caption class="nhsuk-table__caption">Skills breakdown</caption>
+    <caption class="nhsuk-table__caption nhsuk-u-visually-hidden">Skills breakdown</caption>
         <thead>
             <tr>
                 <th>Skill</th>

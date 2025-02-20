@@ -14,22 +14,26 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  NHS.UK prototype kit
+NHSBSA DDAT Profession Capability Framework Self Test
 {% endblock %}
 
 <!-- Edit the header -->
 <!-- Header code examples can be found at https://service-manual.nhs.uk/design-system/components/header -->
+
 {% block header %}
-  {{ header({
-    "service": {
-        "name": "Profession Capability Framework Self Test",
-        "href": "/"
-      },
-      "showNav": "false",
-      "showSearch": "false"
-    })
-  }}
+{{ header({
+    showNav: "true",
+    showSearch: "true",
+    searchAction: " ",
+    organisation: {
+      name: "Business Services Authority",
+      descriptor: "DDAT Profession Capability Framework Self Test"
+    }
+ 
+  })
+}}
 {% endblock %}
+
 
 <!-- Edit the footer -->
 <!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->

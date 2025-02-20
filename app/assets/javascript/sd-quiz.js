@@ -82,21 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const overallAverage = overallScore / totalSkillCount;
     let overallLevel;
     if (overallAverage <= 1.5) {
-        overallLevel = "between Apprentice Designer and Junior Service Designer";
+        overallLevel = "an Apprentice Designer or Junior Service Designer";
     } else if (overallAverage <= 2.5) {
-        overallLevel = "Midweight Service Designer ";
+        overallLevel = "a Midweight Service Designer ";
     } else if (overallAverage <= 3.5) {
-        overallLevel = "Senior Service Designer";
+        overallLevel = "a Senior Service Designer";
     } else {
-        overallLevel = "between Lead Service Designer and Head of Service Design ";
+        overallLevel = "a Lead Service Designer or Head of Service Design ";
     }
 
     // Display overall level
     const overallPanel = document.createElement("div");
     overallPanel.className = "nhsuk-panel nhsuk-panel--confirmation";
     overallPanel.innerHTML = `
-        <h2 class="nhsuk-heading-m">Overall Level</h2>
-        <p>Your scores indicate you are <strong>${overallLevel}</strong>.</p>
+       
+        <p>Your scores indicate your skills may be aligned with <strong>${overallLevel}</strong>.</p>
     `;
     resultsContainer.appendChild(overallPanel);
 

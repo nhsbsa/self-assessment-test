@@ -82,21 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const overallAverage = overallScore / totalSkillCount;
     let overallLevel;
     if (overallAverage <= 1.5) {
-        overallLevel = "between Apprentice Designer and Junior Interaction Designer";
+        overallLevel = "an Apprentice Designer or Junior Interaction Designer";
     } else if (overallAverage <= 2.5) {
-        overallLevel = "Midweight Interaction Designer ";
+        overallLevel = "a Midweight Interaction Designer ";
     } else if (overallAverage <= 3.5) {
-        overallLevel = "Senior Interaction Designer";
+        overallLevel = "a Senior Interaction Designer";
     } else {
-        overallLevel = "between Lead Interaction Designer and Head of Interaction Design ";
+        overallLevel = "a Lead Interaction Designer or Head of Interaction Design ";
     }
 
     // Display overall level
     const overallPanel = document.createElement("div");
     overallPanel.className = "nhsuk-panel nhsuk-panel--confirmation";
     overallPanel.innerHTML = `
-        <h2 class="nhsuk-heading-m">Overall Level</h2>
-        <p>Your scores indicate you are <strong>${overallLevel}</strong>.</p>
+       
+        <p>Your scores indicate your skills may be aligned with <strong>${overallLevel}</strong>.</p>
     `;
     resultsContainer.appendChild(overallPanel);
 

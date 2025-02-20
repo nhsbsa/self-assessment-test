@@ -83,21 +83,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const overallAverage = overallScore / totalSkillCount;
     let overallLevel;
     if (overallAverage <= 1.5) {
-        overallLevel = "between Apprentice User Researcher and Junior User Researcher";
+        overallLevel = "an Apprentice User Researcher or Junior User Researcher";
     } else if (overallAverage <= 2.5) {
-        overallLevel = "Midweight User Researcher ";
+        overallLevel = "a Midweight User Researcher ";
     } else if (overallAverage <= 3.5) {
-        overallLevel = "Senior User Researcher";
+        overallLevel = "a Senior User Researcher";
     } else {
-        overallLevel = "between Lead User Researcher and Head of User Research";
+        overallLevel = "a Lead User Researcher or Head of User Research";
     }
 
     // Display overall level
     const overallPanel = document.createElement("div");
     overallPanel.className = "nhsuk-panel nhsuk-panel--confirmation";
     overallPanel.innerHTML = `
-        <h2 class="nhsuk-heading-m">Overall Level</h2>
-        <p>Your scores indicate you are <strong>${overallLevel}</strong>.</p>
+       
+        <p>Your scores indicate your skills may be aligned with <strong>${overallLevel}</strong>.</p>
     `;
     resultsContainer.appendChild(overallPanel);
 
